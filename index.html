@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leave Application Form - Avaada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #005b96;
+            margin-bottom: 30px;
+        }
+
+        form label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #005fa3;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                width: 100%;
+                padding: 20px;
+                page-break-inside: avoid;
+            }
+
+            .btn-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://cop.avaada.com/wp-content/uploads/2023/11/Avaada_Logo-1.png" alt="">
+        </div>
+        <h2>Leave Application Form</h2>
+        <form id="leaveForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="designation">Designation</label>
+            <input type="text" id="designation" name="designation" required />
+
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" required />
+
+            <label for="leaveType">Type of Leave</label>
+            <select id="leaveType" name="leaveType" required>
+                <option value="">Select Leave Type</option>
+                <option value="casual">Casual Leave</option>
+                <option value="sick">Sick Leave</option>
+                <option value="earned">Earned Leave</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="fromDate">From Date</label>
+            <input type="date" id="fromDate" name="fromDate" required />
+
+            <label for="toDate">To Date</label>
+            <input type="date" id="toDate" name="toDate" required />
+
+            <label for="reason">Reason for Leave</label>
+            <textarea id="reason" name="reason" required></textarea>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required />
+
+            <label for="address">Address During Leave</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <div class="btn-container">
+                <button type="button" class="btn" onclick="window.print()">Print</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
